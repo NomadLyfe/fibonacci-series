@@ -1,5 +1,11 @@
 function fibonacci(num) {
-  // type your code here
+  const fib = [0,1]
+  if (num >= 2) {
+    while (!fib[num]) {
+      fib.push(fib.at(-1) + fib.at(-2))
+    }
+  }
+  return fib[num]
 }
 
 if (require.main === module) {
